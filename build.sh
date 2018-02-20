@@ -2,6 +2,6 @@
 
 # FIXME: use actual version instead of "latest" tag
 
-TAG=latest
+TAG=0.0.1
 
 exec docker build -t nxos/nxos:"$TAG" .
