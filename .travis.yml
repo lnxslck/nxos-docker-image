@@ -7,11 +7,11 @@ env:
   - TAG=0.1
 
 script:
-  - docker build -t luislavaire/nxos:$TAG .
+  - docker build -t nxos/nxos:$TAG .
 
 after_success:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  - docker push luislavaire/nxos:$TAG
+  - docker push nxos/nxos:$TAG
 
 notifications:
   email: false
