@@ -31,4 +31,4 @@ RUN apt-get -y install --allow-unauthenticated \
 		qml-module-qtgraphicaleffects
 
 RUN apt-get -y -qq clean
-RUN rm /var/log/* /tmp/*
+RUN rm -rf /var/log/* /tmp/*
