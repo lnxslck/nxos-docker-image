@@ -7,7 +7,7 @@ env:
   - TAG=0.1
 
 script:
-  - docker build -t nxos/nxos:$TAG .
+  - docker build -t luislavaire/nxos:$TAG .
 
 after_success:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
