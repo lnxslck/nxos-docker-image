@@ -11,4 +11,7 @@ script:
 
 after_success:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  - docker push luislavaire/nxos
+  - docker push luislavaire/nxos:$TAG
+
+notifications:
+  email: false
