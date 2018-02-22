@@ -18,5 +18,21 @@ script:
 
 ```
 
-Replace `${BUILD_SCRIPT}` with the path to your
-build script.
+Replace `${BUILD_SCRIPT_1}` and `${BUILD_SCRIPT_2}` with the path to your
+build script(s).
+
+Your `.travis.yml` should look something like this:
+
+```YAML
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker pull nxos/nxos
+
+script:
+  - docker run --rm -v $(pwd)/build.sh:/build.sh nxos/nxos sh /build.sh
+
+```
