@@ -34,3 +34,8 @@ RUN apt-get -y install \
 
 RUN apt-get -y -qq clean
 RUN rm -rf /var/log/* /tmp/*
+
+# Add a small wrapper for running appimages
+# inside containers.
+# TODO: create a package for this script.
+COPY ./appimage-wrapper /bin/appimage-wrapper
