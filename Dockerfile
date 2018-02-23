@@ -31,7 +31,7 @@ RUN apt-get -y install \
 		plasma-framework-dev \
 		libqt5xmlpatterns5-dev \
 		qtdeclarative5-dev-tools \
-		qml-module-qtgraphicaleffects
+		qml-module-qtgraphicaleffects > /dev/null
 
 RUN apt-get -y -qq clean
 RUN rm -rf /var/log/* /tmp/*
