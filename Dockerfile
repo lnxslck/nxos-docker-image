@@ -37,5 +37,5 @@ RUN rm -rf /var/log/* /tmp/*
 
 # Add a small wrapper for running appimages
 # inside containers.
-# TODO: create a package for this script.
-COPY ./appimage-wrapper /bin/appimage-wrapper
+RUN wget -q --show-progress https://raw.githubusercontent.com/nomad-desktop/appimage-wrapper/master/appimage-wrapper.sh -O /bin/appimage-wrapper
+RUN chmod +x /bin/appimage-wrapper
