@@ -19,6 +19,9 @@ RUN rm nxos.key
 RUN apt-get update -y -qq
 RUN apt-get -y install \
 		git \
+		gcc \
+		g++ \
+		fuse \
 		cmake \
 		inkscape \
 		patchelf \
