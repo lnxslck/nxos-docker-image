@@ -17,7 +17,7 @@ RUN if echo de7501e2951a9178173f67bdd29a9de45a572f19e387db5f4e29eb22100c2d0e nxo
 RUN rm nxos.key
 
 RUN apt-get update -y -qq
-RUN apt-get -y install --allow-unauthenticated \
+RUN apt-get -y install \
 		git \
 		cmake \
 		inkscape \
