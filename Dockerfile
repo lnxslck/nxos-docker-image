@@ -22,6 +22,7 @@ RUN apt-get -y install \
 		gcc \
 		g++ \
 		fuse \
+		kmod \
 		cmake \
 		inkscape \
 		patchelf \
