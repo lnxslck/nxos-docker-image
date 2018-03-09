@@ -1,7 +1,8 @@
-FROM ubuntu:16.04
+FROM ubuntu:12.04
 
 RUN apt-get update
 RUN apt-get install -y apt-transport-https wget ca-certificates
+
 RUN wget https://archive.neon.kde.org/public.key -O neon.key
 RUN if echo ee86878b3be00f5c99da50974ee7c5141a163d0e00fccb889398f1a33e112584 neon.key | sha256sum -c; then \
 		apt-key add neon.key; \
@@ -37,5 +38,5 @@ RUN rm -rf /var/log/* /tmp/*
 
 # Add a small wrapper for running appimages
 # inside containers.
-RUN wget -q --show-progress https://raw.githubusercontent.com/nomad-desktop/appimage-wrapper/master/appimage-wrapper -O /bin/appimage-wrapper
+RUN wget -q https://raw.githubusercontent.com/nomad-desktop/appimage-wrapper/master/appimage-wrapper -O /bin/appimage-wrapper
 RUN chmod +x /bin/appimage-wrapper
