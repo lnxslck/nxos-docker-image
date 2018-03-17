@@ -23,6 +23,7 @@ RUN apt-get -y install \
 		gcc \
 		g++ \
 		cmake \
+		equivs \
 		inkscape \
 		patchelf \
 		qtbase5-dev \
@@ -31,7 +32,7 @@ RUN apt-get -y install \
 		plasma-framework-dev \
 		libqt5xmlpatterns5-dev \
 		qtdeclarative5-dev-tools \
-		qml-module-qtgraphicaleffects > /dev/null
+		qml-module-qtgraphicaleffects
 
 RUN apt-get -y -qq clean
 RUN rm -rf /var/log/* /tmp/*
