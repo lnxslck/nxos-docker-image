@@ -1,4 +1,4 @@
-# nxos-docker-image
+# nxos-docker-image [![Build Status](https://travis-ci.org/nomad-desktop/nxos-docker-image.svg?branch=master)](https://travis-ci.org/nomad-desktop/nxos-docker-image)
 
 This image is useful for building Qt5 applications.
 Be sure to add this to your `.travis.yml`.
